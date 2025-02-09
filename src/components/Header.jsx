@@ -20,8 +20,10 @@ export default function Header() {
                         <h2>SPOOKY!</h2>
                     </div>
                 </Link>
-                <div className="flex gap-x-4 text-xl">
-                    <FontAwesomeIcon icon={faSun} />
+                <div className="flex items-center gap-x-4 text-xl">
+                    <button>
+                        <FontAwesomeIcon icon={faSun} />
+                    </button>
                     <FontAwesomeIcon icon={faUser} />
                 </div>
             </div>
