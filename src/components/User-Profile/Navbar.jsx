@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar({ activeTab = "profile" }) {
     return (
-        <nav className="bg-gray-200">
+        <nav className="max-w-[1500px] mx-auto">
             <ul className="grid grid-cols-5 w-full items-center font-semibold">
                 <li>
                     <Link to="/user-profile">

@@ -7,7 +7,7 @@ export default function Tab({ title, icon, isActive }) {
         flex 
         gap-x-2 
         flex-auto 
-        ${isActive ? ("bg-white text-blue-600") : ("bg-gray-200 text-black")}
+        ${isActive ? ("bg-gray-300 text-blue-600") : ("bg-gray-400 text-black")}
         justify-center 
         items-center 
         h-10
