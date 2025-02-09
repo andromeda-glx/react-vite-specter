@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import SocialMedia from "../SocialMedia";
 
 export default function Profile() {
@@ -16,7 +16,7 @@ export default function Profile() {
                     <p className="text-gray-600 italic">faran.7j99@gmail.com</p>
                     <div className="flex gap-x-6 text-xl mt-5">
                         <SocialMedia name="GitHub" logo={faGithub} link="https://github.com/andromeda-glx" />
-                        <SocialMedia name="Twitter" logo={faTwitter} link={"https://x.com/NASA"} />
+                        <SocialMedia name="Twitter/X" logo={faXTwitter} link={"https://x.com/NASA"} />
                     </div>
                 </div>
             </div>
