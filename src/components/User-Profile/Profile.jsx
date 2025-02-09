@@ -4,7 +4,7 @@ import SocialMedia from "../SocialMedia";
 
 export default function Profile() {
     return (
-        <main className="p-5">
+        <main className="p-5 max-w-[1500px] mx-auto">
             <Navbar activeTab="profile" />
             <div className="bg-gray-200 p-10 flex gap-x-10 h-[80vh]">
                 <div className="w-[300px] h-[300px]">
