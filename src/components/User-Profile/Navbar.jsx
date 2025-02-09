@@ -1,5 +1,5 @@
 import { faFeatherPointed, faGear, faMessage, faUserGroup, faUserPen } from "@fortawesome/free-solid-svg-icons";
-import Tab from "./Tab";
+import Tab from "../Tab";
 
 export default function Navbar() {
     return (

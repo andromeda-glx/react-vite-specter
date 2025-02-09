@@ -1,11 +1,14 @@
-import Header from "./components/Header"
-import Main from "./components/Main"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Index from "./pages/Index.Page"
 
 function App() {
     return (
         <>
-            <Header />
-            <Main />
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Index />} />
+                </Routes>
+            </BrowserRouter>
         </>
     )
 }
