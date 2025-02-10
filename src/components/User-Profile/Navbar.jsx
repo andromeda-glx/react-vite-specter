@@ -44,11 +44,13 @@ export default function Navbar({ activeTab = "profile" }) {
                     </Link>
                 </li>
                 <li>
-                    <Tab
-                        title={"Friends"}
-                        icon={faUserGroup}
-                        isActive={activeTab === "friends"}
-                    />
+                    <Link to="/user-friends">
+                        <Tab
+                            title={"Friends"}
+                            icon={faUserGroup}
+                            isActive={activeTab === "friends"}
+                        />
+                    </Link>
                 </li>
             </ul>
         </nav>
