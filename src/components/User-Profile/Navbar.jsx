@@ -35,11 +35,13 @@ export default function Navbar({ activeTab = "profile" }) {
                     </Link>
                 </li>
                 <li>
-                    <Tab
-                        title={"Comments"}
-                        icon={faMessage}
-                        isActive={activeTab === "comments"}
-                    />
+                    <Link to="/user-comments">
+                        <Tab
+                            title={"Comments"}
+                            icon={faMessage}
+                            isActive={activeTab === "comments"}
+                        />
+                    </Link>
                 </li>
                 <li>
                     <Tab
