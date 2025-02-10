@@ -18,7 +18,7 @@ export default function Friends() {
 
     return (
         <Main tab="friends">
-            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:grid-cols-5 xl:grid-cols-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:grid-cols-5 xl:grid-cols-6">
                 {!isLoading ? friends.map(({ id, firstName, lastName, username, image }) => (
                     <Friend key={id} firstName={firstName} lastName={lastName} username={username} imgLink={image} />
                 )): <Spinner />}

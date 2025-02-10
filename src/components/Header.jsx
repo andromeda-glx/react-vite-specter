@@ -17,7 +17,7 @@ export default function Header() {
                 <Link to="/">
                     <div className="flex items-center gap-x-2 text-4xl">
                         <FontAwesomeIcon icon={faGhost} flip="horizontal" />
-                        <h2>SPOOKY!</h2>
+                        <h2>SPECTER</h2>
                     </div>
                 </Link>
                 <div className="flex items-center gap-x-4 text-xl">
