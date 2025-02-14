@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
-export default function Tab({ title, icon, isActive, link, hasArrow }) {
+export default function Tab({ title, icon, isActive, link, hasArrow, handleClick }) {
     return (
-        <li>
+        <li onClick={() => handleClick(title.toLowerCase())}>
             <Link to={link}>
                 <div
                     className={`
