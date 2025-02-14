@@ -10,6 +10,7 @@ import Layout from "./components/Layout"
 import UserMainLayer from "./components/UserMainLayer"
 import YourAccount from "./components/User-Settings/Settings-Options/YourAccount"
 import Monetization from "./components/User-Settings/Settings-Options/Monetization"
+import Premium from "./components/User-Settings/Settings-Options/Premium"
 
 function App() {
     return (
@@ -23,6 +24,7 @@ function App() {
                             <Route path="/user-profile/settings" element={<UserSettings />}>
                                 <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
                                 <Route path="/user-profile/settings/monetization" element={<Monetization />} />
+                                <Route path="/user-profile/settings/premium" element={<Premium />} />
                             </Route>
                             <Route path="/user-profile/posts" element={<UserPosts />} />
                             <Route path="/user-profile/comments" element={<UserComments />} />

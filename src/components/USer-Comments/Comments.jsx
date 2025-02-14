@@ -17,15 +17,18 @@ export default function Comments() {
     }, [loadMore]);
 
     return (
-        <ul className="h-full w-full flex flex-col gap-y-5">
-            {
-                comments.map(({ id, body, likes }) => <Comment key={id} text={body} likes={likes} />)
-            }
-            <div className="w-full flex flex-col justify-center items-center">
-                <button className="bg-blue-600 my-5 px-5 py-3 text-lg font-semibold text-white cursor-pointer rounded-md" onClick={() => setLoadMore(!loadMore)}>
-                    {isLoading ? <Spinner /> : "Load more comments"}
-                </button>
-            </div>
-        </ul>
+        <div className="p-10">
+            <h1 className="text-xl font-bold mb-5">Your Comments</h1>
+            <ul className="h-full w-full flex flex-col gap-y-5">
+                {
+                    comments.map(({ id, body, likes }) => <Comment key={id} text={body} likes={likes} />)
+                }
+                <div className="w-full flex flex-col justify-center items-center">
+                    <button className="bg-blue-600 my-5 px-5 py-3 text-lg font-semibold text-white cursor-pointer rounded-md" onClick={() => setLoadMore(!loadMore)}>
+                        {isLoading ? <Spinner /> : "Load more comments"}
+                    </button>
+                </div>
+            </ul>
+        </div>
     )
 }

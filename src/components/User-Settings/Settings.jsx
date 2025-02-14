@@ -12,7 +12,7 @@ export default function Settings() {
                     <ul className="h-full">
                         <Option title={"Your account"} icon={faUserGear} link={path + "your-account"} />
                         <Option title={"Monetization"} icon={faSackDollar} link={path + "monetization"} />
-                        <Option title={"Premium"} icon={faCircleCheck} />
+                        <Option title={"Premium"} icon={faCircleCheck} link={path + "premium"} />
                         <Option title={"Subscriptions"} icon={faUserCheck} />
                         <Option title={"Security"} icon={faLock} />
                         <Option title={"Privacy"} icon={faShieldHalved} />
