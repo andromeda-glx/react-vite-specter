@@ -1,4 +1,4 @@
-import Settings from "../components/User-Profile/Settings";
+import Settings from "../components/User-Settings/Settings";
 
 export default function UserSettings() {
     return <Settings />

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import Main from "./Main";
 import axios from "axios";
-import Friend from "../Friend";
+import Friend from "./Friend";
 import Spinner from "../Spinner";
 
 export default function Friends() {
@@ -17,7 +16,7 @@ export default function Friends() {
     }, []);
 
     return (
-        <Main tab="friends">
+        <>
             {isLoading ? <Spinner /> :
                 <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:grid-cols-5 xl:grid-cols-6">
                     {friends.map(({ id, firstName, lastName, username, image }) => (
@@ -25,6 +24,6 @@ export default function Friends() {
                     ))}
                 </ul>
             }
-        </Main>
+        </>
     )
 }

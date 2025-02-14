@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { faFeatherPointed, faGear, faMessage, faUserGroup, faUserPen } from "@fortawesome/free-solid-svg-icons";
-import Tab from "../Tab";
+import Tab from "./Tab";
 
 export default function Navbar({ activeTab = "profile" }) {
     return (
@@ -11,31 +11,31 @@ export default function Navbar({ activeTab = "profile" }) {
                         title={"Profile"}
                         icon={faUserPen}
                         isActive={activeTab === "profile"}
-                        link={"/user-profile"}
+                        link={"/user-profile/profile"}
                     />
                     <Tab
                         title={"Settings"}
                         icon={faGear}
                         isActive={activeTab === "settings"}
-                        link={"/user-settings"}
+                        link={"/user-profile/settings"}
                     />
                     <Tab
                         title={"Posts"}
                         icon={faFeatherPointed}
                         isActive={activeTab === "posts"}
-                        link={"/user-posts"}
+                        link={"/user-profile/posts"}
                     />
                     <Tab
                         title={"Comments"}
                         icon={faMessage}
                         isActive={activeTab === "comments"}
-                        link={"/user-comments"}
+                        link={"/user-profile/comments"}
                     />
                     <Tab
                         title={"Friends"}
                         icon={faUserGroup}
                         isActive={activeTab === "friends"}
-                        link={"/user-friends"}
+                        link={"/user-profile/friends"}
                     />
                 </ul>
             </nav>
