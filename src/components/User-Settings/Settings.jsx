@@ -1,21 +1,31 @@
 import { faCircleCheck, faCircleInfo, faEnvelope, faLock, faSackDollar, faShieldHalved, faSquarePlus, faUniversalAccess, faUserCheck, faUserGear } from "@fortawesome/free-solid-svg-icons";
 import Option from "./Option";
+import { Outlet } from "react-router-dom";
 
 export default function Settings() {
-    const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut fermentum lorem. Sed accumsan odio augue, ac ultrices tortor semper mollis.";
+    const path = "/user-profile/settings/";
 
     return (
-        <ul className="h-full">
-            <Option title={"Your account"} icon={faUserGear} desc={lorem} />
-            <Option title={"Monetization"} icon={faSackDollar} desc={lorem} />
-            <Option title={"Premium"} icon={faCircleCheck} desc={lorem} />
-            <Option title={"Subscriptions"} icon={faUserCheck} desc={lorem} />
-            <Option title={"Security"} icon={faLock} desc={lorem} />
-            <Option title={"Privacy"} icon={faShieldHalved} desc={lorem} />
-            <Option title={"Notifications"} icon={faEnvelope} desc={lorem} />
-            <Option title={"Accessibility"} icon={faUniversalAccess} desc={lorem} />
-            <Option title={"Additional Resources"} icon={faSquarePlus} desc={lorem} />
-            <Option title={"Help Center"} icon={faCircleInfo} desc={lorem} />
-        </ul>
+        <>
+            <div className="grid grid-cols-12">
+                <nav className="col-start-1 col-end-4 border-r border-t">
+                    <ul className="h-full">
+                        <Option title={"Your account"} icon={faUserGear} link={path + "your-account"} />
+                        <Option title={"Monetization"} icon={faSackDollar} link={path + "monetization"} />
+                        <Option title={"Premium"} icon={faCircleCheck} />
+                        <Option title={"Subscriptions"} icon={faUserCheck} />
+                        <Option title={"Security"} icon={faLock} />
+                        <Option title={"Privacy"} icon={faShieldHalved} />
+                        <Option title={"Notifications"} icon={faEnvelope} />
+                        <Option title={"Accessibility"} icon={faUniversalAccess} />
+                        <Option title={"Additional Resources"} icon={faSquarePlus} />
+                        <Option title={"Help Center"} icon={faCircleInfo} />
+                    </ul>
+                </nav>
+                <div className="col-start-4 -col-end-1 p-5">
+                    <Outlet />
+                </div>
+            </div>
+        </>
     )
 }

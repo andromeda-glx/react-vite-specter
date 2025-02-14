@@ -17,13 +17,19 @@ export default function Friends() {
 
     return (
         <>
-            {isLoading ? <Spinner /> :
-                <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:grid-cols-5 xl:grid-cols-6">
-                    {friends.map(({ id, firstName, lastName, username, image }) => (
-                        <Friend key={id} firstName={firstName} lastName={lastName} username={username} imgLink={image} />
-                    ))}
-                </ul>
-            }
+            <div className="grid grid-cols-10">
+                <nav className="col-start-1 col-end-4 p-1">
+                    {isLoading ? <Spinner /> :
+                        <ul className="flex flex-col gap-y-1">
+                            {friends.map(({ id, firstName, lastName, username, image }) => (
+                                <Friend key={id} firstName={firstName} lastName={lastName} username={username} imgLink={image} />
+                            ))}
+                        </ul>
+                    }
+                </nav>
+                <div className="col-start-4 -col-end-1">
+                </div>
+            </div>
         </>
     )
 }

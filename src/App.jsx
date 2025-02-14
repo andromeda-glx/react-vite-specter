@@ -8,6 +8,8 @@ import UserFriends from "./pages/UserFriends.Page"
 import PageNotFound from "./pages/PageNotFound"
 import Layout from "./components/Layout"
 import UserMainLayer from "./components/UserMainLayer"
+import YourAccount from "./components/User-Settings/Settings-Options/YourAccount"
+import Monetization from "./components/User-Settings/Settings-Options/Monetization"
 
 function App() {
     return (
@@ -18,7 +20,10 @@ function App() {
                         <Route path="/" element={<Home />} />
                         <Route path="/user-profile" element={<UserMainLayer />}>
                             <Route path="/user-profile/profile" element={<UserProfile />} />
-                            <Route path="/user-profile/settings" element={<UserSettings />} />
+                            <Route path="/user-profile/settings" element={<UserSettings />}>
+                                <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
+                                <Route path="/user-profile/settings/monetization" element={<Monetization />} />
+                            </Route>
                             <Route path="/user-profile/posts" element={<UserPosts />} />
                             <Route path="/user-profile/comments" element={<UserComments />} />
                             <Route path="/user-profile/friends" element={<UserFriends />} />

@@ -3,8 +3,8 @@ export default function Friend({ username, firstName, lastName, imgLink }) {
     console.log("img", imgLink);
     
     return (
-        <li className="bg-gray-100 rounded-lg p-5 flex flex-col items-center gap-y-5 shadow-md">
-            <div className="w-[100px] h-[100px]">
+        <li className="bg-gray-100 rounded-lg p-3 flex justify-start items-center gap-y-5 shadow-md cursor-pointer">
+            <div className="w-[80px] h-[80px]">
                 <img className="w-full h-full rounded-full object-cover object-center" src={imgLink} alt={`${username}'s profile picture`} />
             </div>
             <div className="">
