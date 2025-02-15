@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { faGhost, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
 export default function Header({lightMode, handleLightMode}) {
     return (
-        <header className={`${lightMode ? "bg-blue-600" : "bg-blue-900"} px-5 py-3 shadow-md mb-5 transition-colors`}>
+        <header className={`${lightMode ? "bg-blue-600" : "bg-blue-900"} px-5 py-3 shadow-md transition-colors`}>
             <div className="
             flex 
             items-center 

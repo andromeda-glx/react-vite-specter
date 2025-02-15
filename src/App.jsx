@@ -26,7 +26,7 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
-                        <Route path="/" element={<Home />} />
+                        <Route path="/" element={<Home lightMode={isLightMode} />} />
                         <Route path="/user-profile" element={<UserMainLayer />}>
                             <Route path="/user-profile/profile" element={<UserProfile />} />
                             <Route path="/user-profile/settings" element={<UserSettings />}>
