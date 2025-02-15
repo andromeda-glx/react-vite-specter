@@ -13,11 +13,11 @@ export default function Profile() {
                 <div className="flex flex-col gap-y-5">
                     <div className="flex items-baseline gap-x-2">
                         <h2 className="text-5xl">Faran</h2>
-                        <p className="text-gray-600 font-light text-2xl">@faran-r</p>
+                        <p className="text-gray-500 font-light text-2xl">@faran-r</p>
                     </div>
                     <div className="flex items-center gap-x-3">
                         <FontAwesomeIcon icon={faEnvelope} />
-                        <p className="text-gray-600 italic">faran.7j99@gmail.com</p>
+                        <p className="text-gray-500 italic">faran.7j99@gmail.com</p>
                     </div>
                     <div className="">
                         <h3 className="text-lg font-semibold">About me:</h3>

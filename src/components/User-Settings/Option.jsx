@@ -2,10 +2,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export default function Option({ icon, title, link }) {
+export default function Option({ icon, title, link, lightMode }) {
     return (
         <Link to={link}>
-            <li className="flex border-b border-b-gray-400 hover:bg-gray-300 items-center gap-x-5 cursor-pointer p-5">
+            <li className={`flex border-b border-b-gray-400 ${lightMode ? "hover:bg-gray-300 text-black" : "hover:bg-gray-700 text-white"} items-center gap-x-5 cursor-pointer p-5 transition-colors`}>
                 <div className="text-2xl">
                     <FontAwesomeIcon icon={icon} />
                 </div>

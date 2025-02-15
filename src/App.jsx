@@ -29,7 +29,7 @@ function App() {
                         <Route path="/" element={<Home lightMode={isLightMode} />} />
                         <Route path="/user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
                             <Route path="/user-profile/profile" element={<UserProfile />} />
-                            <Route path="/user-profile/settings" element={<UserSettings />}>
+                            <Route path="/user-profile/settings" element={<UserSettings lightMode={isLightMode} />}>
                                 <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
                                 <Route path="/user-profile/settings/monetization" element={<Monetization />} />
                                 <Route path="/user-profile/settings/premium" element={<Premium />} />
