@@ -34,8 +34,8 @@ function App() {
                                 <Route path="/user-profile/settings/monetization" element={<Monetization />} />
                                 <Route path="/user-profile/settings/premium" element={<Premium />} />
                             </Route>
-                            <Route path="/user-profile/posts" element={<UserPosts />}>
-                                <Route path="/user-profile/posts/:id" element={<SinglePostPage />} />
+                            <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
+                                <Route path="/user-profile/posts/:id" element={<SinglePostPage lightMode={isLightMode} />} />
                             </Route>
                             <Route path="/user-profile/comments" element={<UserComments />} />
                             <Route path="/user-profile/friends" element={<UserFriends />} />
