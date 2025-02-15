@@ -3,7 +3,7 @@ export default function Friend({ username, firstName, lastName, imgLink, lightMo
     console.log("img", imgLink);
 
     return (
-        <li className={`${lightMode ? "bg-gray-100 text-black" : "bg-gray-900 text-white"} rounded-lg p-3 flex flex-col justify-start items-center gap-y-5 shadow-md cursor-pointer transition-colors`}>
+        <li className={`${lightMode ? "bg-gray-100 text-black" : "bg-gray-900 text-white"} rounded-lg p-3 flex flex-col justify-start items-center gap-y-5 shadow-md cursor-pointer transition-colors hover:scale-105`}>
             {/* <div className="w-full flex justify-end text-gray-400">
                 <FontAwesomeIcon icon={faUpRightFromSquare} />
             </div> */}
