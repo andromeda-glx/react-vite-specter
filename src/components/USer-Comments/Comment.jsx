@@ -2,9 +2,9 @@
 import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function Comment({ text, likes }) {
+export default function Comment({ text, likes, lightMode }) {
     return (
-        <li className="bg-gray-300 rounded-lg p-5">
+        <li className={`${lightMode ? "bg-gray-300 text-black" : "bg-gray-900 text-white"} rounded-lg p-5 transition-colors`}>
             <p className="mb-2 py-5 border-b">{text}</p>
             <div className="flex items-center gap-2 text-blue-600">
                 <span>{likes}</span>

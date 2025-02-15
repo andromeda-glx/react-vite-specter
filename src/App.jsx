@@ -37,7 +37,7 @@ function App() {
                             <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
                                 <Route path="/user-profile/posts/:id" element={<SinglePostPage lightMode={isLightMode} />} />
                             </Route>
-                            <Route path="/user-profile/comments" element={<UserComments />} />
+                            <Route path="/user-profile/comments" element={<UserComments lightMode={isLightMode} />} />
                             <Route path="/user-profile/friends" element={<UserFriends />} />
                         </Route>
                         <Route path="*" element={<PageNotFound />} />
