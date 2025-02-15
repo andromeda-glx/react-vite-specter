@@ -12,13 +12,20 @@ import YourAccount from "./components/User-Settings/Settings-Options/YourAccount
 import Monetization from "./components/User-Settings/Settings-Options/Monetization"
 import Premium from "./components/User-Settings/Settings-Options/Premium"
 import SinglePostPage from "./components/User-Posts/SinglePostPage"
+import { useState } from "react"
 
 function App() {
+    const [isLightMode, setIsLightMode] = useState(true);
+
+    function toggleLightMode(){
+        setIsLightMode(!isLightMode);
+    }
+
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
                         <Route path="/" element={<Home />} />
                         <Route path="/user-profile" element={<UserMainLayer />}>
                             <Route path="/user-profile/profile" element={<UserProfile />} />

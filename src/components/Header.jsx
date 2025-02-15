@@ -1,10 +1,10 @@
-import { faGhost, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faGhost, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({lightMode, handleLightMode}) {
     return (
-        <header className="bg-blue-600 px-5 py-3 shadow-md mb-5">
+        <header className={`${lightMode ? "bg-blue-600" : "bg-blue-900"} px-5 py-3 shadow-md mb-5 transition-colors`}>
             <div className="
             flex 
             items-center 
@@ -21,8 +21,10 @@ export default function Header() {
                     </div>
                 </Link>
                 <div className="flex items-center gap-x-4 text-xl">
-                    <button>
-                        <FontAwesomeIcon icon={faSun} />
+                    <button className="cursor-pointer" onClick={() => handleLightMode()}>
+                        {
+                            lightMode ? <FontAwesomeIcon icon={faSun} /> : <FontAwesomeIcon icon={faMoon} />
+                        }
                     </button>
                     <FontAwesomeIcon icon={faUser} />
                 </div>
