@@ -24,7 +24,7 @@ export default function Posts({lightMode}) {
     }, [loadMore]);
 
     return (
-        <nav className={`p-2 ${lightMode ? "bg-gray-400" : "bg-gray-700"} h-[100%] overflow-y-auto transition-colors`}>
+        <nav className={`p-3 ${lightMode ? "bg-gray-400" : "bg-gray-700"} h-[100%] overflow-y-auto transition-colors`}>
             <ul className="h-full w-full flex flex-col gap-y-5">
                 {
                     // posts.map(({ id, title, body, views, reactions }) => (
