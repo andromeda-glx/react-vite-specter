@@ -11,6 +11,7 @@ import UserMainLayer from "./components/UserMainLayer"
 import YourAccount from "./components/User-Settings/Settings-Options/YourAccount"
 import Monetization from "./components/User-Settings/Settings-Options/Monetization"
 import Premium from "./components/User-Settings/Settings-Options/Premium"
+import SinglePostPage from "./components/User-Posts/SinglePostPage"
 
 function App() {
     return (
@@ -26,7 +27,9 @@ function App() {
                                 <Route path="/user-profile/settings/monetization" element={<Monetization />} />
                                 <Route path="/user-profile/settings/premium" element={<Premium />} />
                             </Route>
-                            <Route path="/user-profile/posts" element={<UserPosts />} />
+                            <Route path="/user-profile/posts" element={<UserPosts />}>
+                                <Route path="/user-profile/posts/:id" element={<SinglePostPage />} />
+                            </Route>
                             <Route path="/user-profile/comments" element={<UserComments />} />
                             <Route path="/user-profile/friends" element={<UserFriends />} />
                         </Route>

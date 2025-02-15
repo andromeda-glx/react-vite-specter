@@ -1,6 +1,3 @@
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 /* eslint-disable react/prop-types */
 export default function Friend({ username, firstName, lastName, imgLink }) {
     console.log("img", imgLink);
