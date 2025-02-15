@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Profile() {
     return (
         <>
-            <div className="w-full h-full flex flex-col items-start gap-10 p-10">
+            <div className="w-full h-full flex flex-col items-start gap-10 p-10 overflow-y-auto">
                 <div className="w-[250px] h-[250px] mx-auto">
                     <img className="w-full h-full rounded-full object-cover object-center" src="https://images.unsplash.com/photo-1610483178766-8092d96033f3?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="user's profile picture" />
                 </div>

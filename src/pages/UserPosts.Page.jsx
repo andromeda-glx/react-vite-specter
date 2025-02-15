@@ -5,8 +5,8 @@ export default function UserPosts() {
 
 
     return (
-        <div className="grid grid-cols-12">
-            <div className="col-start-1 col-end-5">
+        <div className="grid grid-cols-12 h-[100%]">
+            <div className="col-start-1 col-end-5 h-[100%] overflow-y-hidden">
                 <Posts />
             </div>
             <div className="col-start-5 -col-end-1 p-5">

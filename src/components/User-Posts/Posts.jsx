@@ -23,7 +23,7 @@ export default function Posts() {
     }, [loadMore]);
 
     return (
-        <nav className="p-2 bg-gray-700 h-full overflow-y-auto">
+        <nav className="p-2 bg-gray-700 h-[100%] overflow-y-auto">
             <ul className="h-full w-full flex flex-col gap-y-5">
                 {
                     // posts.map(({ id, title, body, views, reactions }) => (

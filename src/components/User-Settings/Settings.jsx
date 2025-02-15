@@ -8,7 +8,7 @@ export default function Settings() {
     return (
         <>
             <div className="grid grid-cols-12">
-                <nav className="col-start-1 col-end-4 border-r border-t">
+                <nav className="col-start-1 col-end-4 border-t max-h-[90%] overflow-y-auto">
                     <ul className="h-full">
                         <Option title={"Your account"} icon={faUserGear} link={path + "your-account"} />
                         <Option title={"Monetization"} icon={faSackDollar} link={path + "monetization"} />
@@ -22,7 +22,7 @@ export default function Settings() {
                         <Option title={"Help Center"} icon={faCircleInfo} />
                     </ul>
                 </nav>
-                <div className="col-start-4 -col-end-1 p-5">
+                <div className="col-start-4 -col-end-1 p-5 max-h-[99%] overflow-y-auto">
                     <Outlet />
                 </div>
             </div>
