@@ -3,7 +3,7 @@ import { faFeatherPointed, faGear, faMessage, faUserGroup, faUserPen } from "@fo
 import Tab from "./Tab";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({lightMode}) {
     const [activeTab, setActiveTab] = useState("profile");
 
     function changeTab(tabName){
@@ -22,6 +22,7 @@ export default function Navbar() {
                         isActive={activeTab === "profile"}
                         link={"/user-profile/profile"}
                         handleClick={changeTab}
+                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Settings"}
@@ -29,6 +30,7 @@ export default function Navbar() {
                         isActive={activeTab === "settings"}
                         link={"/user-profile/settings"}
                         handleClick={changeTab}
+                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Posts"}
@@ -36,6 +38,7 @@ export default function Navbar() {
                         isActive={activeTab === "posts"}
                         link={"/user-profile/posts"}
                         handleClick={changeTab}
+                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Comments"}
@@ -43,6 +46,7 @@ export default function Navbar() {
                         isActive={activeTab === "comments"}
                         link={"/user-profile/comments"}
                         handleClick={changeTab}
+                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Friends"}
@@ -50,6 +54,7 @@ export default function Navbar() {
                         isActive={activeTab === "friends"}
                         link={"/user-profile/friends"}
                         handleClick={changeTab}
+                        lightMode={lightMode}
                     />
                 </ul>
             </nav>

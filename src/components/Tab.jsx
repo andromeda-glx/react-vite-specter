@@ -3,7 +3,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
-export default function Tab({ title, icon, isActive, link, hasArrow, handleClick }) {
+export default function Tab({ title, icon, isActive, link, hasArrow, handleClick, lightMode }) {
     const navigate = useNavigate();
 
     return (
@@ -16,10 +16,13 @@ export default function Tab({ title, icon, isActive, link, hasArrow, handleClick
                         flex 
                         gap-x-2 
                         flex-auto 
-                        ${isActive ? ("bg-blue-200 text-blue-950") : ("bg-blue-500 text-white")}
+                        ${isActive
+                        ? (lightMode ? "bg-blue-200 text-blue-950" : "bg-blue-400 text-blue-950")
+                        : (lightMode ? "bg-blue-500 text-white" : "bg-blue-900 text-white")}
                         justify-center 
                         items-center 
                         h-10
+                        transition-colors
                         `}
             >
                 <span><FontAwesomeIcon icon={icon} /></span>
