@@ -17,7 +17,7 @@ export default function Comments() {
     }, [loadMore]);
 
     return (
-        <div className="p-10">
+        <div className="p-10 w-[100%] overflow-y-auto">
             <h1 className="text-xl font-bold mb-5">Your Comments</h1>
             <ul className="h-full w-full flex flex-col gap-y-5">
                 {

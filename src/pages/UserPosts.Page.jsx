@@ -9,7 +9,7 @@ export default function UserPosts() {
             <div className="col-start-1 col-end-5 h-[100%] overflow-y-hidden">
                 <Posts />
             </div>
-            <div className="col-start-5 -col-end-1 p-5">
+            <div className="col-start-5 -col-end-1 p-5 flex h-[100%] overflow-y-auto justify-center items-center w-[100%]">
                 <Outlet />
             </div>
         </div>
