@@ -9,7 +9,6 @@ export default function SinglePostPage() {
     const { id } = useParams();
 
     useEffect(() => {
-        console.log("asdsad");
 
         axios.get(`https://dummyjson.com/posts/${id}`)
             .then(data => setPost(data.data))
