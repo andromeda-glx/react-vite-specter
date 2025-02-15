@@ -16,7 +16,7 @@ export default function Tab({ title, icon, isActive, link, hasArrow, handleClick
                         flex 
                         gap-x-2 
                         flex-auto 
-                        ${isActive ? ("bg-gray-300 text-blue-600") : ("bg-gray-400 text-black")}
+                        ${isActive ? ("bg-blue-100 text-blue-900") : ("bg-blue-500 text-white")}
                         justify-center 
                         items-center 
                         h-10
