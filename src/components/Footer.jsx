@@ -1,6 +1,7 @@
-export default function Footer() {
+/* eslint-disable react/prop-types */
+export default function Footer({lightMode}) {
   return (
-    <footer className="bg-blue-600 text-white p-5">
+    <footer className={`${lightMode ? "bg-blue-600 " : "bg-blue-900"} text-white p-5 transition-colors`}>
         &copy; SPECTER 2025 All rights reserved.
     </footer>
   )
