@@ -7,8 +7,6 @@ export default function Navbar({lightMode}) {
     const [activeTab, setActiveTab] = useState("profile");
 
     function changeTab(tabName){
-        console.log(tabName);
-        
         setActiveTab(tabName);
     }
 

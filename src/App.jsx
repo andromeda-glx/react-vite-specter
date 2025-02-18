@@ -12,18 +12,23 @@ import YourAccount from "./components/User-Settings/Settings-Options/YourAccount
 import Monetization from "./components/User-Settings/Settings-Options/Monetization"
 import Premium from "./components/User-Settings/Settings-Options/Premium"
 import SinglePostPage from "./components/User-Posts/SinglePostPage"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function App() {
-    const [isLightMode, setIsLightMode] = useState(true);
+        
+    const [isLightMode, setIsLightMode] = useState((JSON.parse(localStorage.getItem('isLightMode'))));
 
-    function toggleLightMode(){
+    function toggleLightMode() {
         setIsLightMode(!isLightMode);
     }
 
+    useEffect(() => {
+        localStorage.setItem("isLightMode", isLightMode);
+    }, [isLightMode])
+
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter basename="/react-vite-specter/">
                 <Routes>
                     <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
                         <Route path="/" element={<Home lightMode={isLightMode} />} />
