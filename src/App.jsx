@@ -31,19 +31,19 @@ function App() {
             <BrowserRouter basename="/react-vite-specter/">
                 <Routes>
                     <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
-                        <Route path="/" element={<Home lightMode={isLightMode} />} />
-                        <Route path="/user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
-                            <Route path="/user-profile/profile" element={<UserProfile />} />
-                            <Route path="/user-profile/settings" element={<UserSettings lightMode={isLightMode} />}>
-                                <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
-                                <Route path="/user-profile/settings/monetization" element={<Monetization />} />
-                                <Route path="/user-profile/settings/premium" element={<Premium />} />
+                        <Route index element={<Home lightMode={isLightMode} />} />
+                        <Route path="user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
+                            <Route path="profile" element={<UserProfile />} />
+                            <Route path="settings" element={<UserSettings lightMode={isLightMode} />}>
+                                <Route path="your-account" element={<YourAccount />} />
+                                <Route path="monetization" element={<Monetization />} />
+                                <Route path="premium" element={<Premium />} />
                             </Route>
-                            <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
-                                <Route path="/user-profile/posts/:id" element={<SinglePostPage lightMode={isLightMode} />} />
+                            <Route path="posts" element={<UserPosts lightMode={isLightMode} />}>
+                                <Route path=":id" element={<SinglePostPage lightMode={isLightMode} />} />
                             </Route>
-                            <Route path="/user-profile/comments" element={<UserComments lightMode={isLightMode} />} />
-                            <Route path="/user-profile/friends" element={<UserFriends lightMode={isLightMode} />} />
+                            <Route path="comments" element={<UserComments lightMode={isLightMode} />} />
+                            <Route path="friends" element={<UserFriends lightMode={isLightMode} />} />
                         </Route>
                         <Route path="*" element={<PageNotFound />} />
                     </Route>
