@@ -15,10 +15,10 @@ export default function Navbar({lightMode}) {
             <nav className="max-w-[1500px] mx-auto hidden sm:block">
                 <ul className="grid sm:grid-cols-5 w-full items-center font-semibold">
                     <Tab
-                        title={"Profile"}
+                        title={"."}
                         icon={faUserPen}
                         isActive={activeTab === "profile"}
-                        link={"/user-profile/profile"}
+                        link={"profile"}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
@@ -26,7 +26,7 @@ export default function Navbar({lightMode}) {
                         title={"Settings"}
                         icon={faGear}
                         isActive={activeTab === "settings"}
-                        link={"/user-profile/settings"}
+                        link={"settings"}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
@@ -34,7 +34,7 @@ export default function Navbar({lightMode}) {
                         title={"Posts"}
                         icon={faFeatherPointed}
                         isActive={activeTab === "posts"}
-                        link={"/user-profile/posts"}
+                        link={"posts"}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
@@ -42,7 +42,7 @@ export default function Navbar({lightMode}) {
                         title={"Comments"}
                         icon={faMessage}
                         isActive={activeTab === "comments"}
-                        link={"/user-profile/comments"}
+                        link={"comments"}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
@@ -50,7 +50,7 @@ export default function Navbar({lightMode}) {
                         title={"Friends"}
                         icon={faUserGroup}
                         isActive={activeTab === "friends"}
-                        link={"/user-profile/friends"}
+                        link={"friends"}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
@@ -62,7 +62,7 @@ export default function Navbar({lightMode}) {
                         title={"Profile"}
                         icon={faUserPen}
                         isActive={activeTab === "profile"}
-                        link={"/user-profile"}
+                        link={"user-profile"}
                         hasArrow={true}
                     />
                 </ul>
