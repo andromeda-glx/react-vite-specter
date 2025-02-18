@@ -6,7 +6,7 @@ export default function Home({lightMode}) {
     return (
         <>
             <div>This is the Home page</div>
-            <Link to="/user-profile/profile">
+            <Link to="/user-profile">
                 <button className={`${lightMode ? "bg-blue-600" : "bg-blue-900"} text-white w-80 p-3 cursor-pointer rounded-md transition-colors`}>
                     Go to your profile
                 </button>

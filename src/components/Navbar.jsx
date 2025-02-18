@@ -15,10 +15,10 @@ export default function Navbar({lightMode}) {
             <nav className="max-w-[1500px] mx-auto hidden sm:block">
                 <ul className="grid sm:grid-cols-5 w-full items-center font-semibold">
                     <Tab
-                        title={"."}
+                        title={"Profile"}
                         icon={faUserPen}
                         isActive={activeTab === "profile"}
-                        link={"profile"}
+                        link={"."}
                         handleClick={changeTab}
                         lightMode={lightMode}
                     />
