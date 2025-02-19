@@ -40,7 +40,7 @@ function App() {
                                 <Route path="/user-profile/settings/premium" element={<Premium />} />
                             </Route>
                             <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
-                                <Route path="/user-profile/:id" element={<SinglePostPage lightMode={isLightMode} />} />
+                                <Route path="/user-profile/posts/:id" element={<SinglePostPage lightMode={isLightMode} />} />
                             </Route>
                             <Route path="/user-profile/comments" element={<UserComments lightMode={isLightMode} />} />
                             <Route path="/user-profile/friends" element={<UserFriends lightMode={isLightMode} />} />
