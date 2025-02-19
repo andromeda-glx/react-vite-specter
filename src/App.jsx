@@ -32,18 +32,18 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
                         <Route index element={<Home lightMode={isLightMode} />} />
-                        <Route path="user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
+                        <Route path="/user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
                             <Route index element={<UserProfile />} />
-                            <Route path="settings" element={<UserSettings lightMode={isLightMode} />}>
-                                <Route path="your-account" element={<YourAccount />} />
-                                <Route path="monetization" element={<Monetization />} />
-                                <Route path="premium" element={<Premium />} />
+                            <Route path="/user-profile/settings" element={<UserSettings lightMode={isLightMode} />}>
+                                <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
+                                <Route path="/user-profile/settings/monetization" element={<Monetization />} />
+                                <Route path="/user-profile/settings/premium" element={<Premium />} />
                             </Route>
-                            <Route path="posts" element={<UserPosts lightMode={isLightMode} />}>
-                                <Route path=":id" element={<SinglePostPage lightMode={isLightMode} />} />
+                            <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
+                                <Route path="/user-profile/:id" element={<SinglePostPage lightMode={isLightMode} />} />
                             </Route>
-                            <Route path="comments" element={<UserComments lightMode={isLightMode} />} />
-                            <Route path="friends" element={<UserFriends lightMode={isLightMode} />} />
+                            <Route path="/user-profile/comments" element={<UserComments lightMode={isLightMode} />} />
+                            <Route path="/user-profile/friends" element={<UserFriends lightMode={isLightMode} />} />
                         </Route>
                         <Route path="*" element={<PageNotFound />} />
                     </Route>
