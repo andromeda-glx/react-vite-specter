@@ -1,8 +1,9 @@
-/* eslint-disable react/prop-types */
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { LightModeContext } from "../contexts/LightModeContext";
 
-export default function Home({lightMode}) {
-  
+export default function Home() {
+    const { lightMode } = useContext(LightModeContext)
     return (
         <>
             <div>This is the Home page</div>

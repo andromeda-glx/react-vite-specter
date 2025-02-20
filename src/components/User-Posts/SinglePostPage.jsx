@@ -1,11 +1,10 @@
-/* eslint-disable react/prop-types */
 import { useParams } from "react-router-dom";
 import Post from "./Post";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../Spinner";
 
-export default function SinglePostPage({lightMode}) {
+export default function SinglePostPage() {
     const [post, setPost] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
@@ -29,7 +28,6 @@ export default function SinglePostPage({lightMode}) {
                 likes={post.reactions?.likes}
                 dislikes={post.reactions?.dislikes}
                 views={post?.views}
-                lightMode={lightMode}
             />
     )
 }

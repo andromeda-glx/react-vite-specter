@@ -12,10 +12,11 @@ import YourAccount from "./components/User-Settings/Settings-Options/YourAccount
 import Monetization from "./components/User-Settings/Settings-Options/Monetization"
 import Premium from "./components/User-Settings/Settings-Options/Premium"
 import SinglePostPage from "./components/User-Posts/SinglePostPage"
+import { LightModeContext } from "./contexts/LightModeContext"
 import { useEffect, useState } from "react"
 
 function App() {
-        
+
     const [isLightMode, setIsLightMode] = useState((JSON.parse(localStorage.getItem('isLightMode'))));
 
     function toggleLightMode() {
@@ -28,27 +29,29 @@ function App() {
 
     return (
         <>
-            <BrowserRouter basename="/react-vite-specter/">
-                <Routes>
-                    <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
-                        <Route index element={<Home lightMode={isLightMode} />} />
-                        <Route path="/user-profile" element={<UserMainLayer lightMode={isLightMode} />}>
-                            <Route index element={<UserProfile />} />
-                            <Route path="/user-profile/settings" element={<UserSettings lightMode={isLightMode} />}>
-                                <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
-                                <Route path="/user-profile/settings/monetization" element={<Monetization />} />
-                                <Route path="/user-profile/settings/premium" element={<Premium />} />
+            <LightModeContext.Provider value={{lightMode: isLightMode, toggleLightMode}}>
+                <BrowserRouter basename="/react-vite-specter/">
+                    <Routes>
+                        <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
+                            <Route index element={<Home />} />
+                            <Route path="/user-profile" element={<UserMainLayer />}>
+                                <Route index element={<UserProfile />} />
+                                <Route path="/user-profile/settings" element={<UserSettings />}>
+                                    <Route path="/user-profile/settings/your-account" element={<YourAccount />} />
+                                    <Route path="/user-profile/settings/monetization" element={<Monetization />} />
+                                    <Route path="/user-profile/settings/premium" element={<Premium />} />
+                                </Route>
+                                <Route path="/user-profile/posts" element={<UserPosts />}>
+                                    <Route path="/user-profile/posts/:id" element={<SinglePostPage />} />
+                                </Route>
+                                <Route path="/user-profile/comments" element={<UserComments />} />
+                                <Route path="/user-profile/friends" element={<UserFriends />} />
                             </Route>
-                            <Route path="/user-profile/posts" element={<UserPosts lightMode={isLightMode} />}>
-                                <Route path="/user-profile/posts/:id" element={<SinglePostPage lightMode={isLightMode} />} />
-                            </Route>
-                            <Route path="/user-profile/comments" element={<UserComments lightMode={isLightMode} />} />
-                            <Route path="/user-profile/friends" element={<UserFriends lightMode={isLightMode} />} />
+                            <Route path="*" element={<PageNotFound />} />
                         </Route>
-                        <Route path="*" element={<PageNotFound />} />
-                    </Route>
-                </Routes>
-            </BrowserRouter>
+                    </Routes>
+                </BrowserRouter>
+            </LightModeContext.Provider>
         </>
     )
 }

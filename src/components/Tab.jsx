@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { LightModeContext } from "../contexts/LightModeContext";
 
-export default function Tab({ title, icon, isActive, link, hasArrow, handleClick, lightMode }) {
+export default function Tab({ title, icon, isActive, link, hasArrow, handleClick }) {
     const navigate = useNavigate();
+    const {lightMode} = useContext(LightModeContext);
 
     return (
         <li className="cursor-pointer" onClick={() => {

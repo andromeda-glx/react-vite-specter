@@ -1,9 +1,8 @@
-/* eslint-disable react/prop-types */
 import { faFeatherPointed, faGear, faMessage, faUserGroup, faUserPen } from "@fortawesome/free-solid-svg-icons";
 import Tab from "./Tab";
 import { useState } from "react";
 
-export default function Navbar({lightMode}) {
+export default function Navbar() {
     const [activeTab, setActiveTab] = useState("profile");
 
     function changeTab(tabName){
@@ -20,7 +19,6 @@ export default function Navbar({lightMode}) {
                         isActive={activeTab === "profile"}
                         link={"."}
                         handleClick={changeTab}
-                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Settings"}
@@ -28,7 +26,6 @@ export default function Navbar({lightMode}) {
                         isActive={activeTab === "settings"}
                         link={"settings"}
                         handleClick={changeTab}
-                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Posts"}
@@ -36,7 +33,6 @@ export default function Navbar({lightMode}) {
                         isActive={activeTab === "posts"}
                         link={"posts"}
                         handleClick={changeTab}
-                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Comments"}
@@ -44,7 +40,6 @@ export default function Navbar({lightMode}) {
                         isActive={activeTab === "comments"}
                         link={"comments"}
                         handleClick={changeTab}
-                        lightMode={lightMode}
                     />
                     <Tab
                         title={"Friends"}
@@ -52,7 +47,6 @@ export default function Navbar({lightMode}) {
                         isActive={activeTab === "friends"}
                         link={"friends"}
                         handleClick={changeTab}
-                        lightMode={lightMode}
                     />
                 </ul>
             </nav>

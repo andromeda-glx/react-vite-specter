@@ -1,13 +1,14 @@
-/* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import Spinner from "../Spinner";
 import PostBox from "./PostBox";
+import { LightModeContext } from "../../contexts/LightModeContext";
 
-export default function Posts({lightMode}) {
+export default function Posts() {
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [loadMore, setLoadMore] = useState(false);
+    const {lightMode} = useContext(LightModeContext);
 
     function fetchAllPosts() {
         setIsLoading(true);
@@ -30,7 +31,7 @@ export default function Posts({lightMode}) {
                     // posts.map(({ id, title, body, views, reactions }) => (
                     //     <Post key={id} title={title} body={body} likes={reactions.likes} dislikes={reactions.dislikes} views={views} />
                     // ))
-                    posts.map(({ id, title }) => <PostBox lightMode={lightMode} key={id} id={id} title={title} />)
+                    posts.map(({ id, title }) => <PostBox key={id} id={id} title={title} />)
                 }
                 <div className="w-full flex flex-col justify-center items-center">
                     <button className="bg-blue-600 my-5 px-5 py-3 text-lg font-semibold text-white cursor-pointer rounded-md" onClick={() => setLoadMore(!loadMore)}>

@@ -4,7 +4,7 @@ import axios from "axios";
 import Friend from "./Friend";
 import Spinner from "../Spinner";
 
-export default function Friends({lightMode}) {
+export default function Friends() {
     const [friends, setFriends] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -22,7 +22,7 @@ export default function Friends({lightMode}) {
                 {isLoading ? <Spinner /> :
                     <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 lg:grid-cols-5 xl:grid-cols-6">
                         {friends.map(({ id, firstName, lastName, username, image }) => (
-                            <Friend lightMode={lightMode} key={id} firstName={firstName} lastName={lastName} username={username} imgLink={image} />
+                            <Friend key={id} firstName={firstName} lastName={lastName} username={username} imgLink={image} />
                         ))}
                     </ul>
                 }

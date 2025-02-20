@@ -1,6 +1,9 @@
+import { useContext } from "react"
+import { LightModeContext } from "../../contexts/LightModeContext"
+
 /* eslint-disable react/prop-types */
-export default function Friend({ username, firstName, lastName, imgLink, lightMode }) {
-    console.log("img", imgLink);
+export default function Friend({ username, firstName, lastName, imgLink }) {
+    const {lightMode} = useContext(LightModeContext);
 
     return (
         <li className={`${lightMode ? "bg-gray-100 text-black" : "bg-gray-900 text-white"} rounded-lg p-3 flex flex-col justify-start items-center gap-y-5 shadow-md cursor-pointer transition-colors hover:scale-105`}>
