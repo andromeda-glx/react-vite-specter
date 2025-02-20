@@ -29,10 +29,10 @@ function App() {
 
     return (
         <>
-            <LightModeContext.Provider value={{lightMode: isLightMode, toggleLightMode}}>
+            <LightModeContext.Provider value={{lightMode: isLightMode, handleLightMode: toggleLightMode}}>
                 <BrowserRouter basename="/react-vite-specter/">
                     <Routes>
-                        <Route path="/" element={<Layout lightMode={isLightMode} handleLightMode={toggleLightMode} />}>
+                        <Route path="/" element={<Layout />}>
                             <Route index element={<Home />} />
                             <Route path="/user-profile" element={<UserMainLayer />}>
                                 <Route index element={<UserProfile />} />

@@ -1,9 +1,12 @@
-/* eslint-disable react/prop-types */
 import { faGhost, faMoon, faSun, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { LightModeContext } from "../contexts/LightModeContext";
 
-export default function Header({lightMode, handleLightMode}) {
+export default function Header() {
+    const {lightMode, handleLightMode} = useContext(LightModeContext);
+
     return (
         <header className={`${lightMode ? "bg-blue-600" : "bg-blue-900"} px-5 py-3 shadow-md transition-colors`}>
             <div className="
